@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>babble</title>
-</head>
-<body>
-    <h1>Hello!</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Babble</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="top-bar">
+                    <!-- More -->
+                    <div class="top-bar__more">
+                        <img src="./assets/icons/more.svg" alt="" class="top-bar__icon" />
+                    </div>
+
+                    <!-- Logo -->
+                    <a href="./" class="logo">
+                        <img src="./assets/icons/logo.svg" alt="babble" class="logo__img" />
+                    </a>
+
+                    <!-- Navbar -->
+                    <nav class="navbar">
+                        <ul class="navbar__list">
+                            <li>
+                                <a href="#!" class="navbar__link">Episodes</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="navbar__link">Trending</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="navbar__link">
+                                    Category
+                                    <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__arrow" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" class="navbar__link">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Action -->
+                    <div class="top-act">
+                        <a href="#!" class="top-act__link">Log in</a>
+                        <a href="#!" class="btn top-act__link top-act__sign-up">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
 </html>
