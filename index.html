@@ -38,7 +38,7 @@
 
                     <!-- Navbar -->
                     <nav class="navbar">
-                        <ul class="navbar__list">
+                        <ul id="pc__list" class="navbar__list">
                             <li>
                                 <a href="#!" class="navbar__link">Episodes</a>
                             </li>
@@ -65,5 +65,22 @@
                 </div>
             </div>
         </header>
+
+        <!-- Tablet & mobile menu -->
+        <header id="menu__mobile" class="menu__mobile">
+            <div class="menu__overlay"></div>
+            <div class="menu__drawer">
+                <div class="menu__close-btn">
+                    <img src="./assets/icons/close.svg" alt="" class="menu__close-icon" />
+                </div>
+                <ul id="menu__list" class="menu__list"></ul>
+            </div>
+        </header>
+
+        <main style="height: 1000px">
+            <div class="hero"></div>
+        </main>
+
+        <script src="./assets/js/scripts.js"></script>
     </body>
 </html>
