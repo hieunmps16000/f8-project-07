@@ -22,3 +22,33 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 157px;
+    height: 64px;
+    line-height: 64px;
+    background: #936cdd;
+    text-align: center;
+    user-select: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
