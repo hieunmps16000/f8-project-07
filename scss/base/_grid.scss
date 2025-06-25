@@ -14,7 +14,7 @@ $container-max-widths: (
     sm: 540px,
     md: 720px,
     lg: 960px,
-    xl: 1170px,
+    xl: 1200px,
     xxl: 1320px,
 );
 $grid-columns: 12 !default;
@@ -38,6 +38,7 @@ $gutters: (
     --grid-gutter-y: 0;
 
     width: 100%;
+    @extend %gutter-padding;
     margin-left: auto;
     margin-right: auto;
 }

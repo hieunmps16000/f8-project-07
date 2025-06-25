@@ -1,3 +1,6 @@
+@use "./grid";
+@use "./mixins";
+
 *,
 ::before,
 ::after {
@@ -14,7 +17,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: "Plus Jakarta Sans";
+    font-family: "Plus Jakarta Sans", sans-serif;
     color: var(--text-color);
 }
 

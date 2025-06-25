@@ -133,7 +133,7 @@ table {
   border-spacing: 0;
 }
 
-.row > * {
+.row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
 }
@@ -844,7 +844,7 @@ table {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    max-width: 1200px;
   }
   .row-cols-xl-1 > * {
     flex: 0 0 auto;
@@ -1180,7 +1180,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Plus Jakarta Sans";
+  font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--text-color);
 }
 
@@ -1230,7 +1230,7 @@ select {
 }
 @media (max-width: 991.98px) {
   .header {
-    padding: 32px 0;
+    padding: 30px 0;
   }
 }
 @media (max-width: 575.98px) {
@@ -1312,6 +1312,7 @@ select {
 .menu__mobile {
   position: fixed;
   inset: 0;
+  z-index: 1;
   opacity: 0;
   visibility: hidden;
 }
@@ -1366,9 +1367,71 @@ select {
   padding: 90px 0 140px 0;
   background: #fff8f3;
 }
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero {
+    padding: 22px 0 32px 0;
+  }
+}
+.hero__group-secondary .hero__thumb {
+  padding: 0;
+}
 .hero__thumb {
   position: relative;
   padding-bottom: 30px;
+}
+@media (max-width: 575.98px) {
+  .hero__thumb {
+    padding-bottom: 18px;
+  }
+}
+.hero__thumb-content {
+  position: absolute;
+  left: 38px;
+  bottom: 16px;
+  width: calc(100% - 76px);
+  padding: 14px;
+  text-align: center;
+  border-radius: 9px;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 12px 44px 0px rgba(0, 0, 0, 0.07);
+}
+@media (max-width: 575.98px) {
+  .hero__thumb-content {
+    left: 22px;
+    bottom: 10px;
+    width: calc(100% - 44px);
+    padding: 8px;
+  }
+}
+.hero__thumb-title {
+  color: #201830;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1;
+}
+@media (max-width: 575.98px) {
+  .hero__thumb-title {
+    font-size: 0.8306rem;
+  }
+}
+.hero__thumb-desc {
+  margin-top: 6px;
+  color: #665f73;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+}
+@media (max-width: 575.98px) {
+  .hero__thumb-desc {
+    margin-top: 4px;
+    font-size: 0.7119rem;
+  }
 }
 .hero__img {
   display: block;
@@ -1377,6 +1440,11 @@ select {
   object-fit: cover;
   border-radius: 8px;
 }
+@media (max-width: 575.98px) {
+  .hero__img {
+    height: 180px;
+  }
+}
 .hero__play {
   position: absolute;
   bottom: 0;
@@ -1384,7 +1452,7 @@ select {
   display: flex;
   align-items: center;
   gap: 12px;
-  width: 194px;
+  width: calc(100% - 76px);
   height: 60px;
   padding: 16px 20px;
   transform: translateX(-50%);
@@ -1392,6 +1460,16 @@ select {
   background: #fff;
   box-shadow: 0px 12px 44px 0px rgba(32, 24, 48, 0.07);
   cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  .hero__play {
+    gap: 8px;
+    width: calc(100% - 44px);
+    height: 36px;
+  }
+}
+.hero__play img {
+  height: 15px;
 }
 .hero__heading {
   margin-top: 18px;
@@ -1402,7 +1480,13 @@ select {
 }
 @media (max-width: 1199.98px) {
   .hero__heading {
-    font-size: 5rem;
+    font-size: 6rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero__heading {
+    margin-top: 40px;
+    font-size: 3.6rem;
   }
 }
 .hero__desc {
@@ -1411,6 +1495,12 @@ select {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 166.667%;
+}
+@media (max-width: 575.98px) {
+  .hero__desc {
+    margin-top: 12px;
+    font-size: 1.4rem;
+  }
 }
 .hero__act {
   display: flex;
@@ -1432,23 +1522,45 @@ select {
 .podcast {
   margin-top: 24px;
 }
+@media (max-width: 575.98px) {
+  .podcast {
+    margin-top: 12px;
+  }
+}
 .podcast__title {
   color: #201830;
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 171.429%;
 }
+@media (max-width: 575.98px) {
+  .podcast__title {
+    font-size: 0.8306rem;
+  }
+}
 .podcast__images {
   display: flex;
   margin-top: 10px;
 }
+@media (max-width: 575.98px) {
+  .podcast__images {
+    margin-top: 5px;
+  }
+}
 .podcast__img, .podcast__qty {
-  margin-left: -18px;
   width: 48px;
   height: 48px;
+  margin-left: -18px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #fff;
+}
+@media (max-width: 575.98px) {
+  .podcast__img, .podcast__qty {
+    width: 28px;
+    height: 28px;
+    margin-left: -10px;
+  }
 }
 .podcast__img:first-child, .podcast__qty:first-child {
   margin: 0;
@@ -1465,23 +1577,65 @@ select {
   font-weight: 600;
   line-height: 183.333%;
 }
+@media (max-width: 575.98px) {
+  .podcast__qty-title {
+    font-size: 0.7119rem;
+  }
+}
 
 .platform {
   position: relative;
   padding-bottom: 28px;
 }
+@media (max-width: 575.98px) {
+  .platform {
+    padding-bottom: 16px;
+  }
+}
 .platform::before, .platform::after {
   position: absolute;
   display: block;
-  content: url(../icons/line-decor-01.svg);
+  content: "";
+  width: 45px;
+  height: 36px;
+  background: url(../icons/line-decor-01.svg) center center/contain no-repeat;
+}
+@media (max-width: 575.98px) {
+  .platform::before, .platform::after {
+    width: 26px;
+    height: 20px;
+  }
 }
 .platform::before {
   top: 36px;
   left: 54px;
 }
+@media (max-width: 575.98px) {
+  .platform::before {
+    top: 20px;
+    left: 32px;
+  }
+}
 .platform::after {
   bottom: 13px;
   right: 64px;
+}
+@media (max-width: 1199.98px) {
+  .platform::after {
+    right: 32px;
+  }
+}
+@media (max-width: 991.98px) {
+  .platform::after {
+    right: 104px;
+    bottom: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .platform::after {
+    right: 38px;
+    bottom: 8px;
+  }
 }
 .platform__qty {
   display: flex;
@@ -1493,6 +1647,13 @@ select {
   border-radius: 50%;
   background: #ff9051;
 }
+@media (max-width: 575.98px) {
+  .platform__qty {
+    width: 48px;
+    height: 48px;
+    margin: 4px 40px 8px 70px;
+  }
+}
 .platform__title {
   color: #fff;
   font-size: 1rem;
@@ -1500,17 +1661,32 @@ select {
   line-height: 1;
   text-align: center;
 }
+@media (max-width: 575.98px) {
+  .platform__title {
+    font-size: 0.5933rem;
+  }
+}
 .platform__title strong {
   display: block;
   margin-bottom: 4px;
   font-size: 1.4rem;
   font-weight: 800;
 }
+@media (max-width: 575.98px) {
+  .platform__title strong {
+    font-size: 0.8306rem;
+  }
+}
 .platform__images {
   display: flex;
   align-items: center;
   gap: 18px;
   margin-top: 12px;
+}
+@media (max-width: 575.98px) {
+  .platform__img {
+    width: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
