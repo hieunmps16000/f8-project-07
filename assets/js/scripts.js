@@ -7,10 +7,10 @@ const menuBtn = $('.top-bar__more');
 const mobileMenu = $('#menu__mobile');
 const mobileMenuCloseBtn = $('.menu__close-btn');
 const menuOverlay = $('.menu__overlay');
+const menuAct = $('.menu-act');
+const topbarAct = $('.top-act');
 
 mobileList.innerHTML = pcList.innerHTML;
-
-console.log(mobileMenu);
 
 menuBtn.addEventListener('click', function() {
     mobileMenu.classList.add('active');
@@ -19,4 +19,6 @@ menuBtn.addEventListener('click', function() {
 mobileMenuCloseBtn.addEventListener('click', function() {
     mobileMenu.classList.remove('active');
 });
+
+menuAct.innerHTML = topbarAct.innerHTML;
 
