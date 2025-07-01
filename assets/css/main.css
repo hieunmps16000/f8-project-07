@@ -1219,6 +1219,52 @@ select {
   font-weight: 600;
 }
 
+.section-heading {
+  color: #201830;
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 123.81%;
+}
+@media (max-width: 575.98px) {
+  .section-heading {
+    font-size: 2.6rem;
+    line-height: 138.462%;
+  }
+}
+.section-heading .underline {
+  position: relative;
+  display: inline-block;
+}
+.section-heading .underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 30px;
+  background: url(../icons/underline-text.svg) bottom center/contain no-repeat;
+}
+.section-desc {
+  margin-top: 18px;
+  color: #665f73;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 175%;
+}
+@media (max-width: 575.98px) {
+  .section-desc {
+    margin-top: 12px;
+    font-size: 1.4rem;
+    line-height: 171.429%;
+  }
+}
+.section-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .platform__images, .platform__qty, .podcast__qty, .hero__act, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
@@ -1693,6 +1739,169 @@ select {
   .platform__img {
     width: 16px;
   }
+}
+
+.podcasts {
+  padding: 160px 0 80px 0;
+}
+@media (max-width: 575.98px) {
+  .podcasts {
+    padding: 100px 0 50px 0;
+  }
+}
+@media (max-width: 991.98px) {
+  .podcasts__inner {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 991.98px) {
+  .podcasts__content {
+    margin-top: 48px;
+  }
+}
+.podcasts__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 38px;
+}
+@media (max-width: 575.98px) {
+  .podcasts__btn {
+    margin-top: 28px;
+  }
+}
+.podcasts__list {
+  position: relative;
+  height: 399px;
+}
+@media (max-width: 575.98px) {
+  .podcasts__list {
+    height: 238px;
+  }
+}
+.podcasts__list::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 287px;
+  height: 287px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: blur(129px);
+  background: #ff9051;
+}
+.podcasts__item {
+  position: absolute;
+}
+.podcasts__item:first-child {
+  top: 0;
+  left: 185px;
+}
+@media (max-width: 1399.98px) {
+  .podcasts__item:first-child {
+    left: 200px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .podcasts__item:first-child {
+    left: 120px;
+  }
+  .podcasts__item:first-child img {
+    width: 120px;
+  }
+}
+@media (max-width: 991.98px) {
+  .podcasts__item:first-child {
+    left: 220px;
+  }
+}
+@media (max-width: 575.98px) {
+  .podcasts__item:first-child {
+    left: 110px;
+  }
+  .podcasts__item:first-child img {
+    width: 89px;
+  }
+}
+.podcasts__item:nth-child(2) {
+  top: 59px;
+  right: 0;
+}
+@media (max-width: 1199.98px) {
+  .podcasts__item:nth-child(2) img {
+    width: 100px;
+  }
+}
+@media (max-width: 575.98px) {
+  .podcasts__item:nth-child(2) {
+    top: 35px;
+  }
+  .podcasts__item:nth-child(2) img {
+    width: 58px;
+  }
+}
+.podcasts__item:nth-child(3) {
+  top: 221px;
+  right: 48px;
+}
+@media (max-width: 1199.98px) {
+  .podcasts__item:nth-child(3) img {
+    width: 100px;
+  }
+}
+@media (max-width: 991.98px) {
+  .podcasts__item:nth-child(3) {
+    top: 242px;
+    right: 120px;
+  }
+}
+@media (max-width: 575.98px) {
+  .podcasts__item:nth-child(3) {
+    top: auto;
+    right: 28px;
+    bottom: 24px;
+  }
+  .podcasts__item:nth-child(3) img {
+    width: 82px;
+  }
+}
+.podcasts__item:nth-child(4) {
+  bottom: 0;
+  left: 169px;
+}
+@media (max-width: 1199.98px) {
+  .podcasts__item:nth-child(4) {
+    left: 120px;
+  }
+  .podcasts__item:nth-child(4) img {
+    width: 100px;
+  }
+}
+@media (max-width: 575.98px) {
+  .podcasts__item:nth-child(4) {
+    left: 101px;
+  }
+  .podcasts__item:nth-child(4) img {
+    width: 75px;
+  }
+}
+.podcasts__item:nth-child(5) {
+  top: 164px;
+  left: 0;
+}
+@media (max-width: 575.98px) {
+  .podcasts__item:nth-child(5) {
+    top: 98px;
+  }
+  .podcasts__item:nth-child(5) img {
+    width: 48px;
+  }
+}
+.podcasts__img {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */
