@@ -1947,8 +1947,13 @@ select {
 .category__more {
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
   margin-top: 55px;
+  transform: translateX(-50%);
+}
+@media (max-width: 575.98px) {
+  .category__more {
+    margin-top: 38px;
+  }
 }
 
 .category-item {

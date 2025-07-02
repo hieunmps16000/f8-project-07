@@ -708,8 +708,12 @@
     &__more {
         position: relative;
         left: 50%;
-        transform: translateX(-50%);
         margin-top: 55px;
+        transform: translateX(-50%);
+
+        @include mixins.breakpoint(sm) {
+            margin-top: 38px;
+        }
     }
 }
 
