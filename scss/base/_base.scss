@@ -56,6 +56,10 @@ select {
     font-weight: 600;
 }
 
+.btn-secondary {
+    background: #201830;
+}
+
 .section {
     &-heading {
         color: #201830;
@@ -86,6 +90,7 @@ select {
     }
 
     &-desc {
+        max-width: 470px;
         margin-top: 18px;
         color: #665f73;
         font-size: 1.6rem;
@@ -93,6 +98,7 @@ select {
         line-height: 175%;
 
         @include mixins.breakpoint(sm) {
+            width: 339px;
             margin-top: 12px;
             font-size: 1.4rem;
             line-height: 171.429%;

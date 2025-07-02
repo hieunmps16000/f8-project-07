@@ -669,3 +669,172 @@
         display: block;
     }
 }
+
+.category {
+    padding: 80px 0 160px 0;
+
+    @include mixins.breakpoint(sm) {
+        padding: 50px 0 85px 0;
+    }
+
+    &__head {
+        text-align: center;
+    }
+
+    &__desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__body {
+        margin-top: 70px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 285px);
+        gap: 30px;
+
+        @include mixins.breakpoint(md) {
+            grid-template-rows: repeat(3, 285px);
+        }
+
+        @include mixins.breakpoint(sm) {
+            grid-template-rows: repeat(5, 285px);
+        }
+    }
+
+    &__more {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 55px;
+    }
+}
+
+.category-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &:nth-child(1) {
+        grid-column: span 4;
+        grid-row: span 2;
+
+        @include mixins.breakpoint(lg) {
+            grid-column: span 8;
+            grid-row: span 1;
+        }
+
+        @include mixins.breakpoint(md) {
+            grid-column: span 12;
+        }
+    }
+
+    &:nth-child(2) {
+        grid-column: span 5;
+        grid-row: span 1;
+
+        @include mixins.breakpoint(lg) {
+            grid-column: span 4;
+            grid-row: span 1;
+        }
+
+        @include mixins.breakpoint(md) {
+            grid-column: span 6;
+        }
+
+        @include mixins.breakpoint(sm) {
+            grid-column: span 12;
+        }
+    }
+
+    &:nth-child(3) {
+        grid-column: span 3;
+        grid-row: span 1;
+
+        @include mixins.breakpoint(lg) {
+            grid-column: span 4;
+        }
+
+        @include mixins.breakpoint(md) {
+            grid-column: span 6;
+        }
+
+        @include mixins.breakpoint(sm) {
+            grid-column: span 12;
+        }
+    }
+
+    &:nth-child(4) {
+        grid-column: span 3;
+        grid-row: span 1;
+
+        @include mixins.breakpoint(lg) {
+            grid-column: span 4;
+        }
+
+        @include mixins.breakpoint(md) {
+            grid-column: span 6;
+        }
+
+        @include mixins.breakpoint(sm) {
+            grid-column: span 12;
+        }
+    }
+
+    &:nth-child(5) {
+        grid-column: span 5;
+        grid-row: span 1;
+
+        @include mixins.breakpoint(lg) {
+            grid-column: span 4;
+        }
+
+        @include mixins.breakpoint(md) {
+            grid-column: span 6;
+        }
+
+        @include mixins.breakpoint(sm) {
+            grid-column: span 12;
+        }
+    }
+
+    &__thumb {
+        position: absolute;
+        inset: 0;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__body {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 16px 24px;
+        backdrop-filter: blur(10px);
+    }
+
+    &__title a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 166.667%;
+    }
+
+    &__desc {
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 171.429%;
+    }
+}
