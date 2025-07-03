@@ -9,6 +9,8 @@
 
 :root {
     --text-color: #665f73;
+    --primary-color: #936cdd;
+    --secondary-color: #201830;
 }
 
 html {
@@ -47,22 +49,32 @@ select {
     min-width: 157px;
     height: 64px;
     line-height: 64px;
-    background: #936cdd;
+    background: var(--primary-color);
     text-align: center;
     user-select: none;
     border-radius: 8px;
     color: #fff;
     font-size: 1.8rem;
     font-weight: 600;
+    transition-property: color, background-color;
+    transition-duration: 0.25s;
+
+    &:hover {
+        background: var(--secondary-color);
+    }
 }
 
 .btn-secondary {
-    background: #201830;
+    background: var(--secondary-color);
+
+    &:hover {
+        background: var(--primary-color);
+    }
 }
 
 .section {
     &-heading {
-        color: #201830;
+        color: var(--secondary-color);
         font-size: 4.2rem;
         font-weight: 700;
         line-height: 123.81%;
@@ -70,22 +82,6 @@ select {
         @include mixins.breakpoint(sm) {
             font-size: 2.6rem;
             line-height: 138.462%;
-        }
-
-        .underline {
-            position: relative;
-            display: inline-block;
-
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                z-index: -1;
-                width: 100%;
-                height: 30px;
-                background: url(../icons/underline-text.svg) bottom center / contain no-repeat;
-            }
         }
     }
 
@@ -109,5 +105,47 @@ select {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+.underline {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transform: translate(-50%);
+        background: url(../icons/heading-underline.svg) bottom center / contain no-repeat;
+    }
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    .dot {
+        display: block;
+        width: 8px;
+        height: 8px;
+        cursor: pointer;
+        border-radius: 50%;
+        background: #d8d5de;
+        transition-property: scale, background-color;
+        transition-duration: 0.25s;
+    }
+
+    .dot:hover,
+    .dot.active {
+        scale: calc(12 / 8 * 100%);
+        background: var(--primary-color);
     }
 }
