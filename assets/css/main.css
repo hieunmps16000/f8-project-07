@@ -2227,7 +2227,7 @@ select {
 }
 @media (max-width: 575.98px) {
   .feedback__dots {
-    margin-left: 36px;
+    margin-left: 0;
   }
 }
 

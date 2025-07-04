@@ -1108,7 +1108,7 @@
         }
 
         @include mixins.breakpoint(sm) {
-            margin-left: 36px;
+            margin-left: 0;
         }
     }
 }
