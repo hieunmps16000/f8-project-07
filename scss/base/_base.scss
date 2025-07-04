@@ -88,7 +88,7 @@ select {
     &-desc {
         max-width: 470px;
         margin-top: 18px;
-        color: #665f73;
+        color: var(--text-color);
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 175%;
