@@ -1067,7 +1067,7 @@
 .feedback {
     padding: 160px 0;
 
-    @include mixins.breakpoint(sm) {
+    @include mixins.breakpoint(lg) {
         padding: 100px 0;
     }
 
@@ -1184,5 +1184,121 @@
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 171.429%;
+    }
+}
+
+.subscribe {
+    @include mixins.breakpoint(sm) {
+        position: relative;
+        padding: 50px 0;
+        border-radius: 12px;
+        background: var(--secondary-color);
+    }
+
+    &__inner {
+        position: relative;
+        padding: 100px 0;
+        border-radius: 12px;
+        background: var(--secondary-color);
+
+        @include mixins.breakpoint(lg) {
+            padding: 50px;
+        }
+
+        @include mixins.breakpoint(sm) {
+            position: unset;
+            padding: 0;
+        }
+    }
+
+    &__heading {
+        color: #fff;
+    }
+
+    &__desc {
+        color: var(--text-color-2);
+    }
+
+    &__form {
+        margin-top: 80px;
+
+        @include mixins.breakpoint(lg) {
+            margin-top: 38px;
+        }
+    }
+
+    &__decor-img {
+        position: absolute;
+        animation: scale-up 1s linear infinite;
+
+        &:first-child {
+            top: 26px;
+            left: 528px;
+
+            @include mixins.breakpoint(lg) {
+                top: unset;
+                left: unset;
+                right: 34px;
+                bottom: 11px;
+            }
+        }
+
+        &:nth-child(2) {
+            top: 180px;
+            right: 27px;
+            animation-delay: 0.5s;
+
+            @include mixins.breakpoint(lg) {
+                top: unset;
+                right: 120px;
+                bottom: 38px;
+            }
+        }
+
+        &:last-child {
+            left: 35px;
+            bottom: 45px;
+            animation-delay: 0.9s;
+
+            @include mixins.breakpoint(lg) {
+                top: unset;
+                left: unset;
+                right: 48px;
+                bottom: 67px;
+            }
+        }
+    }
+}
+
+.form {
+    &__input {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 64px;
+        padding: 0 28px;
+        color: #fff;
+        font-size: 1.6rem;
+        border-radius: 8px;
+        background: var(--bg-input);
+
+        @include mixins.breakpoint(lg) {
+            margin-top: 12px;
+        }
+
+        &::placeholder {
+            color: var(--text-color-2);
+        }
+    }
+
+    &__submit {
+        @include mixins.breakpoint(lg) {
+            margin-top: 18px;
+        }
+
+        &:hover {
+            background: var(--primary-color);
+            opacity: 0.8;
+        }
     }
 }

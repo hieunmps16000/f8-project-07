@@ -9,8 +9,10 @@
 
 :root {
     --text-color: #665f73;
+    --text-color-2: #aba6b5;
     --primary-color: #936cdd;
     --secondary-color: #201830;
+    --bg-input: #2b213f;
 }
 
 html {
@@ -43,6 +45,8 @@ textarea,
 select {
     font-family: inherit;
     color: inherit;
+    border: none;
+    outline: none;
 }
 
 .btn {
@@ -59,6 +63,7 @@ select {
     font-weight: 600;
     transition-property: color, background-color;
     transition-duration: 0.25s;
+    cursor: pointer;
 
     &:hover {
         background: var(--secondary-color);
@@ -148,5 +153,17 @@ select {
     .dot.active {
         scale: calc(12 / 8 * 100%);
         background: var(--primary-color);
+    }
+}
+
+@keyframes scale-up {
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
     }
 }
