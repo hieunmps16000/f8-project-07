@@ -163,7 +163,6 @@
 
     &__close-icon {
         width: 24px;
-        color: #666;
     }
 
     &-act {
@@ -1213,6 +1212,17 @@
 
     &__heading {
         color: #fff;
+
+        .underline::after {
+            top: 4px;
+            width: 154px;
+
+            @include mixins.breakpoint(sm) {
+                top: 20px;
+                width: 82px;
+                height: 16px;
+            }
+        }
     }
 
     &__desc {
@@ -1300,5 +1310,93 @@
             background: var(--primary-color);
             opacity: 0.8;
         }
+    }
+}
+
+.footer {
+    padding: 100px 0 38px;
+    background: #fff8f3;
+
+    @include mixins.breakpoint(sm) {
+        padding: 54px 0 50px 0;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 38px 116px;
+
+        @include mixins.breakpoint(xl) {
+            flex-direction: column;
+        }
+    }
+
+    &__group:first-child {
+        width: 270px;
+    }
+
+    &__group:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 38px 90px;
+        flex: 1;
+
+        @include mixins.breakpoint(xl) {
+            gap: 38px;
+        }
+    }
+
+    &__desc {
+        color: var(--text-color);
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 175%;
+    }
+
+    &__copyright {
+        margin-top: 14px;
+    }
+
+    &__socials,
+    &__platform {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__socials {
+        margin-top: 18px;
+        gap: 14px;
+    }
+
+    &__icon {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 16px;
+        color: var(--secondary-color);
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    &__link {
+        display: block;
+        padding: 8px 0;
+        transition: color 0.25s;
+
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+
+    &__platform {
+        margin-top: 24px;
     }
 }
