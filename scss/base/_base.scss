@@ -8,16 +8,17 @@
 }
 
 :root {
-    --text-color: #665f73;
-    --text-color-2: #aba6b5;
     --primary-color: #936cdd;
     --secondary-color: #201830;
+    --text-color: #665f73;
+    --text-color-2: #aba6b5;
     --bg-input: #2b213f;
 }
 
 html {
     font-size: 62.5%;
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -119,16 +120,30 @@ select {
     display: inline-block;
     z-index: 1;
 
+    &-pc::after {
+        @include mixins.breakpoint(sm) {
+            display: none;
+        }
+    }
+
+    &-mobile::after {
+        display: none;
+
+        @include mixins.breakpoint(sm) {
+            display: inline-block;
+        }
+    }
+
     &::after {
         content: "";
         position: absolute;
         bottom: 0;
         left: 50%;
+        z-index: -1;
         width: 100%;
         height: 100%;
-        z-index: -1;
-        transform: translate(-50%);
-        background: url(../icons/heading-underline.svg) bottom center / contain no-repeat;
+        transform: translateX(-50%);
+        background-repeat: no-repeat;
     }
 }
 

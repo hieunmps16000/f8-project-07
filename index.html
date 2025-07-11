@@ -27,32 +27,32 @@
             <div class="container">
                 <div class="top-bar">
                     <!-- More -->
-                    <div class="top-bar__more">
+                    <button class="top-bar__more" aria-label="Menu">
                         <img src="./assets/icons/more.svg" alt="" class="top-bar__icon" />
-                    </div>
+                    </button>
 
                     <!-- Logo -->
-                    <a href="./" class="logo">
+                    <a href="./" class="logo" aria-label="Go to homepage">
                         <img src="./assets/icons/logo.svg" alt="babble" class="logo__img" />
                     </a>
 
                     <!-- Navbar -->
-                    <nav class="navbar">
+                    <nav class="navbar" aria-label="Main Navigation">
                         <ul id="pc__list" class="navbar__list">
                             <li>
-                                <a href="#!" class="navbar__link">Episodes</a>
+                                <a href="#episodes" class="navbar__link">Episodes</a>
                             </li>
                             <li>
-                                <a href="#!" class="navbar__link">Trending</a>
+                                <a href="#podcasts" class="navbar__link">Trending</a>
                             </li>
                             <li>
-                                <a href="#!" class="navbar__link">
+                                <a href="#category" class="navbar__link">
                                     Category
                                     <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__arrow" />
                                 </a>
                             </li>
                             <li>
-                                <a href="#!" class="navbar__link">Blog</a>
+                                <a href="#feedback" class="navbar__link">Blog</a>
                             </li>
                         </ul>
                     </nav>
@@ -70,10 +70,14 @@
         <header id="menu__mobile" class="menu__mobile">
             <div class="menu__overlay"></div>
             <div class="menu__drawer">
-                <div class="menu__close-btn">
+                <!-- Logo -->
+                <a href="./" class="logo" aria-label="Go to homepage">
+                    <img src="./assets/icons/logo.svg" alt="babble" class="logo__img" />
+                </a>
+                <button class="menu__close-btn" aria-label="Close menu">
                     <img src="./assets/icons/close.svg" alt="" class="menu__close-icon" />
-                </div>
-                <ul id="menu__list" class="menu__list"></ul>
+                </button>
+                <nav><ul id="menu__list" class="menu__list"></ul></nav>
 
                 <!-- Menu action -->
                 <div class="menu-act"></div>
@@ -119,19 +123,19 @@
                                     <div class="platform__images">
                                         <img
                                             src="./assets/icons/spotify.svg"
-                                            alt=""
+                                            alt="spotify"
                                             decoding="async"
                                             class="platform__img"
                                         />
                                         <img
                                             src="./assets/icons/google-podcast.svg"
-                                            alt=""
+                                            alt="Google podcast"
                                             decoding="async"
                                             class="platform__img"
                                         />
                                         <img
                                             src="./assets/icons/apple-podcast.svg"
-                                            alt=""
+                                            alt="Apple podcast"
                                             decoding="async"
                                             class="platform__img"
                                         />
@@ -139,7 +143,7 @@
                                 </div>
 
                                 <div class="hero__thumb">
-                                    <img src="./assets/img/hero-singer-02.jpg" alt="" class="hero__img" />
+                                    <img src="./assets/img/hero-singer-02.jpg" alt="Son Tung MTP" class="hero__img" />
                                     <div class="hero__thumb-content">
                                         <h3 class="hero__thumb-title">Son Tung MTP</h3>
                                         <p class="hero__thumb-desc">Song podcaster</p>
@@ -183,7 +187,7 @@
             </section>
 
             <!-- Podcasts -->
-            <section class="podcasts">
+            <section id="podcasts" class="podcasts">
                 <div class="container">
                     <div class="row podcasts__inner">
                         <div class="col col-xl-5 col-lg-6 col-12">
@@ -205,31 +209,31 @@
                             <div class="podcasts__list">
                                 <img
                                     src="./assets/icons/apple-podcast-148x148.svg"
-                                    alt=""
+                                    alt="Apple podcast"
                                     decoding="async"
                                     class="podcasts__img"
                                 />
                                 <img
                                     src="./assets/icons/soundcloud-100x100.svg"
-                                    alt=""
+                                    alt="Sound cloud"
                                     decoding="async"
                                     class="podcasts__img"
                                 />
                                 <img
                                     src="./assets/icons/google-podcast-138x138.svg"
-                                    alt=""
+                                    alt="Google podcast"
                                     decoding="async"
                                     class="podcasts__img"
                                 />
                                 <img
                                     src="./assets/icons/spotify-126x126.svg"
-                                    alt=""
+                                    alt="Spotify"
                                     decoding="async"
                                     class="podcasts__img"
                                 />
                                 <img
                                     src="./assets/icons/pocket-casts-80x80.svg"
-                                    alt=""
+                                    alt="Pocket cast"
                                     decoding="async"
                                     class="podcasts__img"
                                 />
@@ -240,7 +244,7 @@
             </section>
 
             <!-- Category -->
-            <section class="category">
+            <section id="category" class="category">
                 <div class="container">
                     <section class="category__head">
                         <h2 class="section-heading">Listen by <span class="underline">category</span></h2>
@@ -376,11 +380,13 @@
             </section>
 
             <!-- Episodes -->
-            <section class="episodes">
+            <section id="episodes" class="episodes">
                 <div class="container">
                     <header class="episodes__head">
                         <h2 class="section-heading episodes__heading">
-                            Our most popular <span class="underline">episodes</span>
+                            Our most
+                            <span class="underline underline-pc">popular</span>
+                            <span class="underline underline-mobile">episodes</span>
                         </h2>
                         <a href="#!" class="btn btn-secondary episodes__head-more">All episodes</a>
                     </header>
@@ -525,9 +531,9 @@
                             </article>
                         </div>
                         <div class="dots episodes__dots">
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
+                            <button class="dot active" aria-label="Go to slide 1" aria-current="true"></button>
+                            <button class="dot" aria-label="Go to slide 2"></button>
+                            <button class="dot" aria-label="Go to slide 3"></button>
                         </div>
                         <a href="#!" class="btn btn-secondary episodes__head-more--rp">All episodes</a>
                     </div>
@@ -535,7 +541,7 @@
             </section>
 
             <!-- Feedback -->
-            <section class="feedback">
+            <section id="feedback" class="feedback">
                 <div class="container">
                     <div class="feedback__list">
                         <article class="feedback-item">
@@ -600,12 +606,19 @@
                         </header>
 
                         <!-- Subscribe form -->
-                        <form action="" class="subscribe__form" method="post">
+                        <form
+                            action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                            class="subscribe__form"
+                            method="post"
+                            target="_blank"
+                        >
                             <div class="row">
                                 <div class="col col-12 col-lg-4 offset-md-0 offset-lg-1">
                                     <input
                                         type="text"
                                         class="form__input"
+                                        name="name"
+                                        id="name"
                                         placeholder="Your name"
                                         autocomplete="off"
                                         required
@@ -615,6 +628,8 @@
                                     <input
                                         type="email"
                                         class="form__input"
+                                        name="email"
+                                        id="email"
                                         placeholder="Your email address"
                                         autocomplete="off"
                                         required
@@ -643,24 +658,63 @@
                     <div class="footer__group">
                         <div class="footer__column">
                             <!-- Logo -->
-                            <a href="./" class="logo">
+                            <a href="./" class="logo" aria-label="Go to homepage">
                                 <img src="./assets/icons/logo.svg" alt="babble" class="logo__img" />
                             </a>
                             <p class="footer__desc footer__copyright">Copyright © 2022 UIHUT all rights reserved.</p>
-                            <ul class="footer__socials">
+                            <ul class="footer__socials" aria-label="Socials">
                                 <li>
-                                    <a href="#!">
-                                        <img src="./assets/icons/facebook.svg" alt="" class="footer__icon" />
+                                    <a href="#!" aria-label="Facebook" title="Facebook">
+                                        <svg
+                                            class="footer__icon"
+                                            width="36"
+                                            height="36"
+                                            viewBox="0 0 36 36"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <circle cx="18" cy="18" r="18" fill="currentColor" />
+                                            <path
+                                                d="M19.142 24.8488V18.0346H21.19L21.4615 15.6363H19.142L19.1455 14.4359C19.1455 13.8103 19.2088 13.4753 20.1667 13.4753H21.4471V11.0767H19.3987C16.9381 11.0767 16.0722 12.24 16.0722 14.1967V15.6365H14.5384V18.035H16.0722V24.7521C16.6698 24.8638 17.2875 24.9228 17.92 24.9228C18.3286 24.9228 18.7368 24.8981 19.142 24.8488Z"
+                                                fill="white"
+                                            />
+                                        </svg>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#!">
-                                        <img src="./assets/icons/linkedin.svg" alt="" class="footer__icon" />
+                                    <a href="#!" aria-label="Linkedin" title="Linkedin">
+                                        <svg
+                                            class="footer__icon"
+                                            width="36"
+                                            height="36"
+                                            viewBox="0 0 36 36"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <circle cx="18" cy="18" r="18" fill="currentColor" />
+                                            <path
+                                                d="M11.0768 12.6851C11.0768 12.2188 11.2405 11.8342 11.5679 11.5312C11.8954 11.2282 12.3211 11.0767 12.845 11.0767C13.3595 11.0767 13.7758 11.2258 14.0939 11.5242C14.4214 11.8319 14.5851 12.2328 14.5851 12.727C14.5851 13.1746 14.4261 13.5475 14.108 13.8459C13.7805 14.1536 13.3502 14.3074 12.8169 14.3074H12.8029C12.2883 14.3074 11.872 14.1536 11.5539 13.8459C11.2358 13.5382 11.0768 13.1512 11.0768 12.6851ZM11.2592 24.9228V15.5802H14.3746V24.9228H11.2592ZM16.1007 24.9228H19.2161V19.706C19.2161 19.3797 19.2535 19.1279 19.3283 18.9508C19.4593 18.6338 19.6581 18.3657 19.9248 18.1466C20.1914 17.9275 20.5258 17.8179 20.9281 17.8179C21.976 17.8179 22.4999 18.5219 22.4999 19.9298V24.9228H25.6152V19.5662C25.6152 18.1862 25.2878 17.1396 24.6329 16.4263C23.978 15.713 23.1126 15.3564 22.0368 15.3564C20.8299 15.3564 19.8897 15.8739 19.2161 16.9088V16.9368H19.202L19.2161 16.9088V15.5802H16.1007C16.1194 15.8785 16.1288 16.8063 16.1288 18.3634C16.1288 19.9205 16.1194 22.107 16.1007 24.9228Z"
+                                                fill="white"
+                                            />
+                                        </svg>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#!">
-                                        <img src="./assets/icons/switter.svg" alt="" class="footer__icon" />
+                                    <a href="#!" aria-label="Twitter" title="Twitter">
+                                        <svg
+                                            class="footer__icon"
+                                            width="36"
+                                            height="36"
+                                            viewBox="0 0 36 36"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <circle cx="18" cy="18" r="18" fill="currentColor" />
+                                            <path
+                                                d="M27 12.7158C26.3306 12.9938 25.6174 13.1781 24.8737 13.2675C25.6388 12.8351 26.2226 12.1556 26.4971 11.3365C25.7839 11.7391 24.9964 12.0235 24.1571 12.1822C23.4799 11.4995 22.5146 11.0767 21.4616 11.0767C19.4186 11.0767 17.7739 12.6466 17.7739 14.5712C17.7739 14.8481 17.7986 15.1144 17.8594 15.3679C14.7915 15.2262 12.0769 13.8342 10.2533 11.7136C9.93487 12.2365 9.74813 12.8351 9.74813 13.4795C9.74813 14.6894 10.4062 15.762 11.3872 16.3829C10.7944 16.3723 10.2127 16.2093 9.72 15.9526C9.72 15.9633 9.72 15.9771 9.72 15.991C9.72 17.6887 10.9991 19.0989 12.6765 19.4238C12.3761 19.5015 12.0487 19.5388 11.709 19.5388C11.4727 19.5388 11.2342 19.526 11.0104 19.4791C11.4885 20.8627 12.8453 21.8799 14.4585 21.9129C13.203 22.8427 11.6089 23.4029 9.88313 23.4029C9.5805 23.4029 9.29025 23.3902 9 23.355C10.6346 24.353 12.5719 24.9228 14.661 24.9228C21.4515 24.9228 25.164 19.5974 25.164 14.9813C25.164 14.8268 25.1584 14.6777 25.1505 14.5297C25.8829 14.0376 26.4982 13.4231 27 12.7158Z"
+                                                fill="white"
+                                            />
+                                        </svg>
                                     </a>
                                 </li>
                             </ul>
@@ -678,13 +732,13 @@
                                     <a href="#!" class="footer__link">Episodes</a>
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer__link">Trending</a>
+                                    <a href="#podcasts" class="footer__link">Trending</a>
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer__link">Category</a>
+                                    <a href="#category" class="footer__link">Category</a>
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer__link">Blog</a>
+                                    <a href="#feedback" class="footer__link">Blog</a>
                                 </li>
                             </ul>
                         </div>
@@ -726,27 +780,27 @@
                             <h3 class="footer__heading">Listen on</h3>
                             <ul class="footer__platform">
                                 <li>
-                                    <a href="#!">
-                                        <img src="./assets/icons/spotify-36x36.svg" alt="" class="footer__icon"
+                                    <a href="#!" aria-label="Spotify" title="Spotify">
+                                        <img src="./assets/icons/spotify-36x36.svg" alt="Spotify" class="footer__icon"
                                     /></a>
                                 </li>
                                 <li>
-                                    <a href="#!">
+                                    <a href="#!" aria-label="Google podcast" title="Google podcast">
                                         <img src="./assets/icons/google-podcast-36x36.svg" alt="" class="footer__icon"
                                     /></a>
                                 </li>
                                 <li>
-                                    <a href="#!">
+                                    <a href="#!" aria-label="Sound Cloud" title="Sound Cloud">
                                         <img src="./assets/icons/soundcloud-36x36.svg" alt="" class="footer__icon"
                                     /></a>
                                 </li>
                                 <li>
-                                    <a href="#!">
+                                    <a href="#!" aria-label="Apple podcast" title="Apple podcast">
                                         <img src="./assets/icons/apple-podcast-36x36.svg" alt="" class="footer__icon"
                                     /></a>
                                 </li>
                                 <li>
-                                    <a href="#!">
+                                    <a href="#!" aria-label="Pocket cast" title="Pocket cast">
                                         <img src="./assets/icons/pocket-casts-36x36.svg" alt="" class="footer__icon"
                                     /></a>
                                 </li>

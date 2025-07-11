@@ -41,6 +41,7 @@ $gutters: (
     margin-right: auto;
 
     @include mixins.breakpoint(sm) {
+        --grid-gutter-x: 18px;
         padding-left: 18px;
         padding-right: 18px;
     }
