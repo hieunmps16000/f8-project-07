@@ -33,6 +33,7 @@
 
 .top-bar {
     @extend %flexItemsCenter;
+    position: relative;
     justify-content: space-between;
 
     @include mixins.breakpoint(sm) {
@@ -45,6 +46,20 @@
         @include mixins.breakpoint(lg) {
             display: block;
         }
+    }
+}
+
+.header .logo {
+    @include mixins.breakpoint(lg) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @include mixins.breakpoint(md) {
+        position: unset;
+        transform: unset;
     }
 }
 
@@ -94,17 +109,15 @@
     }
 
     &__sign-up {
-        display: block;
         min-width: 116px;
         height: 48px;
         line-height: 48px;
         text-align: center;
-        color: #fff;
         border-radius: 6px;
-        background: var(--secondary-color);
+        color: #fff;
 
-        &:hover {
-            background: var(--primary-color);
+        &:hover::before {
+            border-radius: 6px;
         }
     }
 }
@@ -121,7 +134,7 @@
     &__overlay {
         position: fixed;
         inset: 0;
-        z-index: 1;
+        z-index: 2;
         background: rgba(0, 0, 0, 0.6);
         opacity: 0;
         visibility: hidden;
@@ -138,7 +151,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: 3;
         width: 75%;
         height: 100%;
         padding: 60px 36px;
@@ -460,9 +473,9 @@
         position: absolute;
         display: block;
         content: "";
-        width: 45px;
-        height: 36px;
-        background: url(../icons/line-decor-01.svg) center center / contain no-repeat;
+        width: 52px;
+        height: 32px;
+        background-image: url(../icons/line-decor-01.svg);
 
         @include mixins.breakpoint(sm) {
             width: 26px;
@@ -588,11 +601,14 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
         margin-top: 38px;
 
         @include mixins.breakpoint(sm) {
             margin-top: 28px;
+        }
+
+        &-icon {
+            margin-left: 8px;
         }
     }
 
@@ -1187,7 +1203,12 @@
             width: 270px;
             height: 284px;
 
+            @include mixins.breakpoint(lg) {
+                display: none;
+            }
+
             @include mixins.breakpoint(sm) {
+                display: block;
                 top: 47px;
                 width: 160px;
                 height: 168px;
@@ -1352,8 +1373,12 @@
             margin-top: 18px;
         }
 
+        &::before {
+            display: none;
+        }
+
         &:hover {
-            background: var(--primary-color);
+            background-color: var(--primary-color);
             opacity: 0.8;
         }
     }
